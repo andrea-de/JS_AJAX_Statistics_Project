@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/congressGrid.css">
+    <link rel="stylesheet" href="../style/tables.css">
+</head>
+
+<body>
+    <div class="bodyContainer">
+        <header>
+            <img src="http://www.michigan.gov/images/som/symbolicons-iconJudical_509731_7.png" style="height: 60px" ;>
+            <a><img src="https://image.flaticon.com/icons/png/128/542/542638.png" style="height: 30px;"> info@tgif.com</a>
+        </header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">TGIF</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Senate.html">Senate</a></li>
+                            <li><a href="House.html">House</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../pages/SenateAttendance.html">Senate</a></li>
+                            <li><a href="../pages/HouseAttendance.html">House</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../pages/SenateLoyalty.html">Senate</a></li>
+                            <li><a href="../pages/HouseLoyalty.html">House</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="textContent">
+            <h2>Senators</h2>
+            <img scr="http://lorempixel.com/600/200/city/1">
+            <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House. </p>
+
+        </div>
+        <div class="imgContent">
+            <img src="https://wallpaperscraft.com/image/us_capitol_building_night_washington_dc_10919_300x500.jpg" style="margin: auto; vertical-align: bottom">
+        </div>
+        <!-- Filters -->
+        <div class="tableFilters">
+            <!-- Party Filters  -->
+            <div>
+                <span>Filter by Party: </span>
+                <input type="checkbox" name="party" value="R">Republican
+                <input type="checkbox" name="party" value="D">Democrat
+                <input type="checkbox" name="party" value="I">Independent
+            </div>
+            <!-- State Filters  -->
+            <div>
+                <span>Filter by State: </span>
+                <select onchange="filterState()" id="states"></select>
+            </div>
+        </div>
+        <!--Table container-->
+        <div class="tableDiv">
+            <table class="hTable">
+                <thead>
+                    <tr class="head">
+                        <td>Name</td>
+                        <td>Party</td>
+                        <td>State</td>
+                        <td>Years in Office</td>
+                        <td>% Votes w/ Party</td>
+                    </tr>
+                </thead>
+                <tbody class="putData">
+                </tbody>
+            </table>
+        </div>
+        <footer class="footer ">
+            <div class="container">
+                <span class="text-muted">&copy; 2016 TGIF | All Rights Reserved</span>
+            </div>
+        </footer>
+        <script src="../js/data/dataS.js"></script>
+        <script src="../js/senate.js"></script>
+    </div>
+</body>
+
+</html>

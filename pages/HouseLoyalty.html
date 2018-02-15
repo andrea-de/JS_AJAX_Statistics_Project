@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Site Style Sheet -->
+    <link rel="stylesheet" href="../style/AttGrid.css">
+    <link rel="stylesheet" href="../style/Att.css">
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+
+<body>
+    <div class="bodyContainer">
+        <header>
+            <img src="http://www.michigan.gov/images/som/symbolicons-iconJudical_509731_7.png" style="height: 60px" ;>
+            <a><img src="https://image.flaticon.com/icons/png/128/542/542638.png" style="height: 30px;"> info@tgif.com</a>
+        </header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">TGIF</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../pages/Senate.html">Senate</a></li>
+                            <li><a href="../pages/House.html">House</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../pages/SenateAttendance.html">Senate</a></li>
+                            <li><a href="../pages/HouseAttendance.html">House</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../pages/SenateLoyalty.html">Senate</a></li>
+                            <li><a href="../pages/HouseLoyalty.html">House</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="textContent">
+            <div>
+                <h2>Party Loyalty</h2>
+                <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda.</p>
+            </div>
+        </div>
+        <div class="topTable">
+            <h3>House at a Glance</h3>
+            <table class="glance">
+                <thead>
+                    <tr>
+                        <th>Party</th>
+                        <th>Number of Reps</th>
+                        <th>% Voted with Prty</th>
+                    </tr>
+                </thead>
+                <tbody id="glance">
+                </tbody>
+            </table>
+        </div>
+        <div class="horLine">
+            <hr>
+        </div>
+        <div class="leftTable">
+            <h3>Least Loyal</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of Party Votes</th>
+                        <th>% Party Votes</th>
+                    </tr>
+                </thead>
+                <tbody id="botLoy10">
+                </tbody>
+            </table>
+        </div>
+        <div class="rightTable">
+            <h3>Most Loyal</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of Party Votes</th>
+                        <th>% Party Votes</th>
+                    </tr>
+                </thead>
+                <tbody id="topLoy10">
+                </tbody>
+            </table>
+        </div>
+        <footer class="navbar-header">
+            <span class="text-muted">&copy; 2016 TGIF | All Rights Reserved</span>
+        </footer>
+    </div>
+    <script src="../js/data/dataH.js"></script>
+    <script src="../js/chooseChamber.js"></script>
+    <script>
+        chooseChamber("House");
+
+    </script>
+    <script src="../js/glance.js"></script>
+    <script src="../js/loyalty.js"></script>
+</body>
+
+</html>

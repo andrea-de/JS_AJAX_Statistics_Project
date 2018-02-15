@@ -1,0 +1,45 @@
+.bodyContainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 70px 50px 1fr 1px 1fr 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
+
+header {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+nav {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.textContent {
+    grid-area: 3 / 1 / 4 / 2;
+    padding: 5px 20px 0px 20px;
+    overflow-y: auto;
+}
+
+.topTable {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.horLine {
+    grid-area: 4 / 1 / 5 / 3;
+}
+
+.leftTable {
+    grid-area: 5 / 1 / 6 / 2;
+    overflow-y: auto;
+}
+
+.rightTable {
+    grid-area: 5 / 2 / 6 / 3;
+    overflow-y: auto;
+}
+
+footer {
+    grid-area: 6 / 1 / 7 / 3;
+}
